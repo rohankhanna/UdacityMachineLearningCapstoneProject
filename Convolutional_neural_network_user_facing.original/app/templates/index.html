@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" hola_ext_inject="disabled"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CNN_Devanagari</title>
+  <script src="https://code.jquery.com/jquery-latest.js"></script>
+  </script>
+
+  <script>
+  function page_loaded() {
+  }
+  var $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
+  </script><style type="text/css"></style>
+
+  </head>
+  <body>
+    <div>
+      <div>
+      <div>
+        <style>
+
+    html, body {
+        width: 100%;
+        height: 100%;
+    }
+
+    #sketch {
+        border: 5px solid black;
+        height: 200px;
+        width: 200px;
+        position: relative;
+    }
+
+    #tmp_canvas {
+        position: absolute;
+        left: 0px; right: 0;
+        bottom: 0; top: 0;
+        cursor: crosshair;
+    }
+</style>
+
+<h2>Convolutional Neural Network trained on handwritten Devanagari script characters</h2>
+
+<br>
+
+<div>
+<div>
+
+  <h4>
+    I have implemented this demo as an easy to understand demonstration of how effective neural networks are at correctly categorizing hand drawn Devanagari characters.
+  </h4>
+</div>
+</div>
+
+<center>
+    <div>
+        <h4> Please draw a Devanagari (Hindi) consonant or numeral in the box below:</h4>
+        <div id="sketch">
+            <canvas id="paint"></canvas>
+        </div>
+        <br>
+        <button type="button" onclick="clearDrawing()">Clear</button>
+        <button type="button" onclick="submitDrawing()">Submit</button>
+        <br>
+        <h3 id="result"></h3>
+    </div>
+</center>
+
+<script type="text/javascript" src="static/js/ocr_canvas.js"></script>
+        </div>
+      </div>
+    </div>   
+  </body>
+
+</html>

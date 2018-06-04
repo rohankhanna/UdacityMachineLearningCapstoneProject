@@ -1,0 +1,5 @@
+# Ignore from Version Control
+
+Images/
+data.csv
+.ipynb_checkpoints
